@@ -8,6 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class BookReview {
 
+  public enum MediaType{
+    BOOK,
+    TEDTALK,
+    ARTICLE
+  }
+
   public String id;
   
   // The book reviewed in this review
@@ -17,6 +23,10 @@ public class BookReview {
     this.id=id;
     this.bookId=bookId;
   }
+
+  public MediaType mediaType;
+
+  
 
 
 }

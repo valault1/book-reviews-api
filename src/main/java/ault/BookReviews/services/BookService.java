@@ -35,7 +35,7 @@ public class BookService {
     }
 
     @Transactional
-    public String createBookReview(Book newBook) {
+    public String createBook(Book newBook) {
       _bookRepository.save(newBook);
       return newBook.getId();
       
@@ -43,7 +43,7 @@ public class BookService {
     }
 
     @Transactional
-    public String updateBookReview(Book updatedBook) {
+    public String updateBook(Book updatedBook) {
       _bookRepository.save(updatedBook);
       return updatedBook.getId();
     }

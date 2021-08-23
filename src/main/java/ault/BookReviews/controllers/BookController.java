@@ -12,36 +12,34 @@ import org.springframework.web.bind.annotation.RestController;
 import ault.BookReviews.models.Book;
 import ault.BookReviews.services.BookService;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
 @RestController
 public class BookController {
-	private final BookService _bookService;
+  private final BookService _bookService;
 
   @Autowired
   public BookController(BookService bookService) {
-      this._bookService = bookService;
+    this._bookService = bookService;
   }
 
   @GetMapping("/book/count")
   public long projectCount() {
-		return _bookService.projectCount();
-	}
+    return _bookService.projectCount();
+  }
 
- 
   @GetMapping("/book/projects")
   public List<Book> projects() {
-		return _bookService.projects();
-	}
+    return _bookService.projects();
+  }
 
   @PutMapping("/book")
   public String createProject(@RequestBody Book newBook) {
-		return _bookService.createBook(newBook);
-	}
+    return _bookService.createBook(newBook);
+  }
 
   @PostMapping("/book")
   public String updateProject(@RequestBody Book updatedBook) {
-		return _bookService.updateBook(updatedBook);
-	}
-
+    return _bookService.updateBook(updatedBook);
+  }
 
 }

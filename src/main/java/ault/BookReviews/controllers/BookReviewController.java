@@ -13,36 +13,34 @@ import ault.BookReviews.models.BookReview;
 import ault.BookReviews.services.BookReviewService;
 import ault.BookReviews.services.DTOs.BookReviewDTO;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
 @RestController
 public class BookReviewController {
-	private final BookReviewService _bookReviewService;
+  private final BookReviewService _bookReviewService;
 
   @Autowired
   public BookReviewController(BookReviewService bookReviewService) {
-      this._bookReviewService = bookReviewService;
+    this._bookReviewService = bookReviewService;
   }
 
   @GetMapping("/bookReview/count")
   public long projectCount() {
-		return _bookReviewService.projectCount();
-	}
+    return _bookReviewService.projectCount();
+  }
 
- 
   @GetMapping("/bookReview/projects")
   public List<BookReviewDTO> bookReviews() {
-		return _bookReviewService.bookReviews();
-	}
+    return _bookReviewService.bookReviews();
+  }
 
   @PutMapping("/bookReview")
   public String createProject(@RequestBody BookReview newBookReview) {
-		return _bookReviewService.createBookReview(newBookReview);
-	}
+    return _bookReviewService.createBookReview(newBookReview);
+  }
 
   @PostMapping("/bookReview")
   public String updateProject(@RequestBody BookReview updatedBookReview) {
-		return _bookReviewService.updateBookReview(updatedBookReview);
-	}
-
+    return _bookReviewService.updateBookReview(updatedBookReview);
+  }
 
 }

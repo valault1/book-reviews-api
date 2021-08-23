@@ -1,0 +1,24 @@
+http://localhost:8080/swagger-ui.html#!/entity45controller/createEntityUsingPUT
+
+// Quote
+{
+  "entityTypeId": "6098b21216d4900c4b5f9261",
+  "entityProperties": {
+    "Book":"The New Testament",
+    "Quote Text":"Jesus wept",
+    "Author":"Matthew"
+  },
+  "tags": ["productivity", "Sadness"]
+}
+
+//Book
+{
+  "entityTypeId": "6099a749a1634951bd48c133",
+  "entityProperties": {
+    "Title":"The 7 Habits of Highly Effective People",
+    "Author":"Stephen R. Covey",
+    "Rating":"Pretty good",
+    "Review":"Here are my notes...."
+  },
+  "tags": ["Generosity", "Sadness"]
+}

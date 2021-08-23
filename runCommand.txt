@@ -1,1 +1,6 @@
+
+// refresh dependencies
+mvn package
+
+// run
 mvn spring-boot:run

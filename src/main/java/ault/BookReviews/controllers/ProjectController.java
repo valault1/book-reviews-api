@@ -12,36 +12,34 @@ import org.springframework.web.bind.annotation.RestController;
 import ault.BookReviews.models.Project;
 import ault.BookReviews.services.ProjectService;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
 @RestController
 public class ProjectController {
-	private final ProjectService projectService;
+  private final ProjectService projectService;
 
   @Autowired
   public ProjectController(ProjectService projectService) {
-      this.projectService = projectService;
+    this.projectService = projectService;
   }
 
   @GetMapping("/project/count")
   public long projectCount() {
-		return projectService.projectCount();
-	}
+    return projectService.projectCount();
+  }
 
- 
   @GetMapping("/project/projects")
   public List<Project> projects() {
-		return projectService.projects();
-	}
+    return projectService.projects();
+  }
 
   @PutMapping("/project")
   public String createProject(@RequestBody Project newProject) {
-		return projectService.createProject(newProject);
-	}
+    return projectService.createProject(newProject);
+  }
 
   @PostMapping("/project")
   public String updateProject(@RequestBody Project updatedProject) {
-		return projectService.updateProject(updatedProject);
-	}
-
+    return projectService.updateProject(updatedProject);
+  }
 
 }

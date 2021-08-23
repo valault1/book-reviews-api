@@ -1,0 +1,20 @@
+{
+  "isTaggable":true,
+  "properties": [
+    {
+      "propertyName":"name",
+      "isOptional":false,
+      "propertyType":"String"
+    },
+    {
+      "propertyName":"quoteText",
+      "isOptional":false,
+      "propertyType":"String"
+    },
+    {
+      "propertyName":"author",
+      "isOptional":false,
+      "propertyType":"String"
+    }
+  ]
+}
